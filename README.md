@@ -1,3 +1,5 @@
+OBS.: antes de começar, é necessário criar um S3 manualmente em sua conta AWS. Substitua o nome 'terraform-state-fiap-group-18' pela S3 criada em sua conta.
+
 APPLY:
 - Provisionar primeiro a infra do `network`
 - `eks`, `rds` e `documentdb` podem ser provisionados simultaneamente
