@@ -7,7 +7,7 @@ def lambda_handler(event, context):
     print(message)
 
     #TODO: é preciso mudar a url com o DNS do LB do order-service
-    orderServiceAddress = "http://ada859e8692e840ea9a41533c9f5c8d6-315966617.us-east-1.elb.amazonaws.com/orders"
+    orderServiceAddress = "http://a6945c02e6bf44ba0b2f32721ea971bb-1914662718.us-east-1.elb.amazonaws.com/orders"
     
     http = urllib3.PoolManager()
     response = http.request('PATCH', orderServiceAddress, body = message, headers = {'Content-Type': 'application/json'}, retries = False)
@@ -15,5 +15,4 @@ def lambda_handler(event, context):
 
     return {
         'statusCode': 200,
-        'body': json.dumps(response)
     }
